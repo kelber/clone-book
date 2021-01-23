@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "clonebook-2e016": {
+      "hosting": {
+        "clone-book": [
+          "clonebook-2e016"
+        ]
+      }
+    }
+  }
+}
