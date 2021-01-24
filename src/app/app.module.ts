@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
 import { MaterialModule } from './shared/material-module';
 
 
@@ -21,6 +23,7 @@ import { PostService } from './service/post.service';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +34,7 @@ import { PostService } from './service/post.service';
   BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    RouterModule,
     FormsModule,
     MaterialModule,
     HomeModule,

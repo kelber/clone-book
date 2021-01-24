@@ -9,7 +9,7 @@ import {MatDialogRef} from '@angular/material/dialog';
 export class RegisterComponent implements OnInit {
 
   constructor(
-    // public dialogRef: MatDialogRef<RegisterComponent>
+    public dialogRef: MatDialogRef<RegisterComponent>
     ) { }
 
   ngOnInit(): void {

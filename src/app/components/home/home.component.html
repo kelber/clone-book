@@ -28,11 +28,11 @@
     </div>
     <div class="home__header__right">
       <div>
-        <!-- <img
+         <img
             alt=""
             mat-card-avatar
             [src]="user?.avatar">
-        <span class="name">{{ user?.firstName || 'Indranil'}}</span> -->
+        <span class="name">{{ user?.firstName || 'user'}}</span> 
       </div>
       <div>
         <mat-icon>add</mat-icon>
@@ -70,11 +70,11 @@
     <div class="home__body__sidebarLeft">
       <div class="inside">
         <div class="user-avatar">
-          <!-- <img
+           <img
               alt=""
               mat-card-avatar
               src="{{ user?.avatar }}">
-            <span class="name">{{ user?.firstName || 'Indranil'}} {{ user?.lastName }}</span> -->
+            <span class="name">{{ user?.firstName || 'username'}} {{ user?.lastName }}</span> 
         </div>
         <div>
           <mat-icon> local_hospital</mat-icon>
@@ -134,10 +134,10 @@
             class="post-message-header"
             style="padding-bottom: 20px; border-bottom: 1px solid lightgray"
           >
-             <!-- <img
+             <img
                 alt=""
                 mat-card-avatar
-                [src]="user?.avatar">  -->
+                [src]="user?.avatar"> 
               <form #form="ngForm" (ngSubmit)="postMessage(form)">
                 <input class="on-your-mind" name="message" ngModel placeholder="What's on your mind?" type="text">
                 <button style="display: none;" type="submit"></button>
@@ -162,18 +162,20 @@
         </mat-card>
 
         <!--Loop Through All Posts From Database and Display-->
-        <!-- <mat-card *ngFor="let p of posts" class="posts">
+         <mat-card *ngFor="let p of posts" class="posts">
             <mat-card-header class="posts__header">
               <img alt="{{ p?.title }}" mat-card-avatar [src]="p?.avatar">
               <div class="posts__header__right">
-                <span>{{ p?.time?.seconds * 1000 | date:'shortTime' }}</span>
+                <span>{{ p?.time  | date: 'shortTime' }}</span>
+                <!-- <span>{{ p?.time?.seconds * 1000 | date:'shortTime' }}</span> -->
+                <!-- mediumTime -->
                 <h3>{{ p?.title }}</h3>
               </div>
             </mat-card-header>
             <mat-card-content class="posts__body">
               <p>{{ p?.message }}</p>
             </mat-card-content>
-          </mat-card> -->
+          </mat-card> 
       </div>
     </div>
 

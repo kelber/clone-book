@@ -20,8 +20,8 @@
         <p>By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt out at any time.</p>
   
         <button type="submit" class="submit-button" 
+        [mat-dialog-close]="form.value" 
         >Sign Up</button>
-        <!--   [mat-dialog-close]="form.value" --> 
       </form>
     </div>
   </section>
