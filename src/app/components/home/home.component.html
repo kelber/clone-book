@@ -166,7 +166,8 @@
             <mat-card-header class="posts__header">
               <img alt="{{ p?.title }}" mat-card-avatar [src]="p?.avatar">
               <div class="posts__header__right">
-                <span>{{ p?.time  | date: 'shortTime' }}</span>
+                <span>{{ p?.time 
+                   | date: 'shortTime' }}</span>
                 <!-- <span>{{ p?.time?.seconds * 1000 | date:'shortTime' }}</span> -->
                 <!-- mediumTime -->
                 <h3>{{ p?.title }}</h3>
