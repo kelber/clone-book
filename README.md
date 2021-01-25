@@ -1,20 +1,27 @@
 # CloneBook
 
-This applications running with Angular + CD+CI to firebase with data and authentication works
+This Angular applications running with CD + CI integrations and auto deploy to firebase (data and authentication tools)
 
-###### CI -> Merge code in
-go to github and create a PullRequest and Merge it
+### CI -> Merge code in
 
-###### CD -> Release Code Out
-go to console and run
+    - go to github and create a PullRequest and Merge it
+
+### CD -> Release Code Out
+
+    - go to console and run
 
 ```js
 firebase deploy
 
 ```
 
-#### Install
+## Install
 
+```js
 ng add @angular/fire
+
 npm i firebase
+
 ng add @angular/material
+
+```
