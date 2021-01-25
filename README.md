@@ -11,5 +11,3 @@ https://github.com/bhaikaju/facebook-clone/blob/master/src/app/services/auth.ser
 #### Install
 
 #### Install
-
-#### Install
