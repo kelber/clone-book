@@ -1,49 +1,69 @@
-<div class="login-container"> 
-    <div class="login-container">
+<div class="login-container">
+  <div class="login-container">
+    <header class="login__header">
+      <div class="login__header__left">
+        <!-- <img alt="logo" src="assets/fb-logo-1.jpg"> -->
+        <h1 class="clone-book">CloneBook</h1>
+        <h2>CloneBook helps you give your data to be used agains´t you ;)</h2>
+      </div>
 
-        <header class="login__header">
-          <div class="login__header__left">
-            <!-- <img alt="logo" src="assets/fb-logo-1.jpg"> -->
-            <h1 class="clone-book">CloneBook</h1>
-            <h2>CloneBook helps you give your data to be used agains´t you ;)</h2>
-          </div>
+      <div class="login__header__right">
+        <mat-card class="login__header__right__card">
+          <mat-card-content class="login__header__right__card__content">
+            <form #form="ngForm" (ngSubmit)="login(form)" class="login-form">
+              <!-- <p>{{ form.value | json }}</p> -->
+              <input
+                name="email"
+                ngModel
+                placeholder="Email address or phone number"
+                required
+                type="text"
+                #emailField="ngModel"
+                [class.field-error]="emailField.touched && emailField.invalid"
+                />
+                <!-- #cssEmail -->
+              <!-- <p>{{ cssEmail.className }}</p> -->
+              <span
+                [hidden]="
+                  emailField.valid ||
+                  emailField.untouched
+                "
+                class="invalid"
+                >email obrigatorio</span
+              >
 
-            
-          <div class="login__header__right">
-            <mat-card class="login__header__right__card">
-              <mat-card-content class="login__header__right__card__content">
-                  <form #form="ngForm" 
-                  (ngSubmit)="login(form)" 
-                 class="login-form"
-                 >
-                  <input name="email" ngModel placeholder="Email address or phone number" required type="text">
-                  <input name="password" ngModel placeholder="Password" required type="text">
-                  <button [disabled]="form.invalid || form.pending"
-                          class="login-button"
-                          *ngIf="!form.pending"
-                          type="submit">Log In
-                  </button>
-                </form> 
-                <a>Forgotten account?</a>
-                <hr>
-                <button class="create-account" (click)="openRegister()">Create New Account</button>
-              </mat-card-content>
-      
-            </mat-card>
-      
-            <p class="tagline"><strong>Create a Page</strong> for a celebrity, band or business.</p>
-          </div>
-      
-      
-        </header>
+              <input
+                name="password"
+                ngModel
+                placeholder="Password"
+                required
+                type="text"
+              />
+              <button
+                [disabled]="form.invalid || form.pending"
+                class="login-button"
+                *ngIf="!form.pending"
+                type="submit"
+              >
+                Log In
+              </button>
+            </form>
+            <a>Forgotten account?</a>
+            <hr />
+            <button class="create-account" (click)="openRegister()">
+              Create New Account
+            </button>
+          </mat-card-content>
+        </mat-card>
 
+        <p class="tagline">
+          <strong>Create a Page</strong> for a celebrity, band or business.
+        </p>
+      </div>
+    </header>
 
-
-        
-
-  <footer class="login__footer">
-    <img alt="footer" src="assets/footer_crop.jpg">
-  </footer>  
-
-
+    <footer class="login__footer">
+      <img alt="footer" src="assets/footer_crop.jpg" />
+    </footer>
+  </div>
 </div>

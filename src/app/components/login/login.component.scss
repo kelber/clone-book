@@ -72,6 +72,14 @@
             }
           }
 
+          .field-error {
+            border: 1px solid red;
+          }
+
+          span {
+            color: tomato;
+          }
+
           .login-button {
             background-color: $primary-button-color;
             padding: 15px;
